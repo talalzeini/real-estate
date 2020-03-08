@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Playfair+Display|Roboto&display=swap");
 
+/* global styles start */
+
 body{
     font-family:"Roboto";
     margin:0;
@@ -72,3 +74,77 @@ button.rounded{
     font-size:1.25rem;
     font-weight: 300;
 }
+/* global styles end */
+
+/* header styles start */
+
+#header-hero-container{
+    min-height:600px;
+    height:calc(100vh);
+    position:relative; 
+}
+header{
+    background: transparent;
+    padding: 1rem 0;
+    border-bottom:1px solid rgba(255,255,255,0.1);
+    position: fixed;
+    width: 100%;
+    z-index:3;
+}
+#logo{
+    font-size:1.7rem;
+    color:white;
+    text-decoration: none;
+    position: relative;
+    top:4px;
+    font-weight: 800;
+}
+.hamburger-menu{
+  background-color: transparent;
+  border:1px solid black;
+  width:30px;
+  padding:3px 5px;
+  cursor:pointer;
+  margin-top:10px;
+  display:none;
+}
+.hamburger-menu .strip{
+    display: block;
+    height:1px;
+    background-color: white;
+    margin:4px 0;
+}
+header ul{
+    list-style-type:none;
+}
+header ul li{
+    display:inline-block;
+    margin: 0 15px; 
+}
+#close-flyout{
+    display: none;
+}
+header ul li a{
+    color:#999;
+    font-size:16px;
+    text-decoration:none;
+}
+header ul.is-sticky li a {
+    color: black;
+}
+header ul li a:hover,header ul li a.active{
+   color:white; 
+}
+header ul.is-sticky li a:hover, header ul.is-sticky li a.active{
+    color: #f69314;
+}
+
+/* header styles end */
+
+
+
+
+
+
+
+
