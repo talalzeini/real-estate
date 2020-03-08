@@ -141,7 +141,45 @@ header ul.is-sticky li a:hover, header ul.is-sticky li a.active{
 
 /* header styles end */
 
+/* hero styles start */
 
+#hero {
+    background: url("https://onclickwebdesign.com/wp-content/uploads/hero_1.jpg") center center no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+  }
+#hero .fade{
+    position: absolute;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    background:rgba(52,58,64,0.9);
+    z-index: 1;
+}  
+#hero .hero-text{
+    position: absolute;
+    top:50%;
+    margin:-75px auto 0;
+    left:0;
+    right:0;
+    z-index: 2;
+    color:white;
+    text-align:center;
+    width:500px;
+}
+#hero .hero-text p{
+   line-height: 1.5em;
+   font-weight: 300;
+   font-size: 1rem;
+}
+
+/* hero styles end */
 
 
 
