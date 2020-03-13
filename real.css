@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Playfair+Display|Roboto&display=swap");
 
 /* global styles start */
-
 body{
     font-family:"Roboto";
     margin:0;
@@ -11,6 +10,7 @@ body{
     color:#777;
     line-height:1.7;
 }
+
 *{
     outline:none;
 }
@@ -77,7 +77,6 @@ button.rounded{
 /* global styles end */
 
 /* header styles start */
-
 #header-hero-container{
     min-height:600px;
     height:calc(100vh);
@@ -138,11 +137,9 @@ header ul li a:hover,header ul li a.active{
 header ul.is-sticky li a:hover, header ul.is-sticky li a.active{
     color: #f69314;
 }
-
 /* header styles end */
 
 /* hero styles start */
-
 #hero {
     background: url("https://onclickwebdesign.com/wp-content/uploads/hero_1.jpg") center center no-repeat;
     background-size: cover;
@@ -178,11 +175,9 @@ header ul.is-sticky li a:hover, header ul.is-sticky li a.active{
    font-weight: 300;
    font-size: 1rem;
 }
-
 /* hero styles end */
 
 /* how it works styles start */
-
 #how-it-works{
     padding: 3rem;
     background-color: #f8f9fa;
@@ -202,16 +197,13 @@ header ul.is-sticky li a:hover, header ul.is-sticky li a.active{
     color: #f69314;
     font-size:35px;
 }
-
 /* how it works styles end */
 
 /* properties styles start */
-
 #properties{
     margin: 4rem 0 8rem;
     position:relative;
 }
-
 #properties h2{
     margin-bottom: 3rem;
 }
@@ -253,7 +245,6 @@ header ul.is-sticky li a:hover, header ul.is-sticky li a.active{
     font-weight:800;
     margin: 0 0 0.5rem 0;
 }
-
 #properties-slider .property-details span{
     font-size:0.8rem;
     padding-right: 15px;
@@ -312,6 +303,176 @@ header ul.is-sticky li a:hover, header ul.is-sticky li a.active{
 }
 /* agents styles end */
 
+/* best real estate styles start */
 
+#the-best{
+    margin:2rem 0;
+}
+#the-best .flex > img{
+    width:47%;
+}
+#the-best .flex > div{
+    width:40%;
+}
+#the-best ul{
+   padding-left: 20px;
+   margin-bottom:4rem;
+}
+#the-best ul li{
+    margin:10px;
+ }
+/* best real estate styles end */
 
+/* services styles start */
+#services {
+    background:#f8f9fa;
+    padding:6rem 0;
+    margin: 8rem 0;
+    border-bottom:1px solid #dee2e6;
+}
+#services h2{
+    text-align: center;
+    margin-bottom: 3rem;
+}
+#services .flex{
+    flex-wrap:wrap;
+}
+#services .flex > div {
+    width:30%;
+    margin-bottom: 2rem;
+}
+#services .flex > div .fas{
+    color: #f69314;
+    font-size: 40px;
+    float: left;
+    text-align: center;
+    width: 20%;
+    margin-top: 15px;
+}
+#services .flex > div .services-card-right{
+    float:right;
+    width:75%;
+}
+#services .flex > div a{
+   color: #f69314;
+   text-decoration: none;
+}
+#services .flex > div a:hover{
+    text-decoration: underline;
+ }
+/* services styles end */
 
+/* testimonials styles start */
+#testimonials {
+    margin-bottom: 8rem;
+}
+#testimonials h2{
+    text-align: center;
+}
+#testimonials-slider .slick-slide{
+    text-align: center;
+}
+#testimonials-slider blockquote{
+    font-size:1.5rem;
+    font-style:italic;
+    margin:1rem auto 3rem;
+    max-width:740px;
+}
+#testimonials-slider .testimonials-caption{
+    width: 200px;
+    margin:0 auto;
+}
+#testimonials-slider .testimonials-caption img{
+    width: 60px;
+    border-radius: 30px;
+    float: left;
+}
+#testimonials-caption p{
+    position: relative;
+    top:13px;
+    font-size: 1.2rem;
+}
+#testimonials-slider .slick-arrow{
+    position: absolute;
+    color:#222;
+    text-decoration: none;
+    top:50%;
+    margin-top:-35px;
+    font-size: 40px;
+}
+#testimonials-slider .slick-next{
+    right:0;
+}
+/* testimonials styles end */
+
+/* contact us styles start */
+
+#contact{
+    background: #f8f9fa;
+    padding: 4rem 0 8rem;
+}
+#contact h2{
+    text-align: center;
+    margin-bottom: 4rem;
+}
+#form-container{
+    width:58%;
+    background-color: white;
+    box-sizing: border-box;
+    padding:3rem;
+    height: 0%;
+}
+#form-container h3{
+    color:black;
+    margin-bottom: 2rem;
+}
+#form-container label{
+    display:block;
+    margin-top: 1rem;
+    color:black;
+}
+#form-container input, 
+#form-container textarea{
+    display:block;
+    margin-top: 1rem;
+    padding:10px;
+    color:black;
+    border-radius: 20px;
+    border:1px solid #ced4da;
+    box-sizing: border-box;
+    height:43px;
+    width:100%;
+    font-size: 1rem;
+    color:#495057;
+}
+#form-container textarea{
+    height:170px;
+    margin-bottom:2rem;
+    resize:none;
+}
+#address-container{
+    width:38%;
+    background-color: white;
+    box-sizing: border-box;
+    padding:1.5rem;
+    height:0%;
+}
+#address-container label{
+    margin-top: 2rem;
+    display: block;
+}
+#address-container label:first-child{
+    margin-top: 0;
+}
+#address-container adress{
+    margin-bottom: 1.5rem;
+    font-style: normal;
+}
+#address-container a{
+text-decoration: none;
+color: #f69314;
+}
+#address-container a:hover{
+    text-decoration: underline;
+    }
+/* contact us styles end */
