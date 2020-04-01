@@ -41,7 +41,7 @@
             <div class="fade"></div>
             <div class="hero-text"  >
                 <h1>Buy and sell real estate properties</h1>
-                <p>Lorem ipsum dolor sit amet consectectur adipisicing elit. Laboriosam assumenda ea quo cupiditate facere deleniti fuga officia.</p>
+                <p>This is an example of a real estate website, where you can virtually buy and sell properties.</p>
             </div>
         </section>
 
@@ -167,6 +167,15 @@
     </section>
 
 
+    <div id="congrats" class="wrap hide">
+    
+        <div class="payment">
+            <h2 style=" margin-top:10px;font-size: 30px;"> Congratulations!</h2>
+               <p style="text-align: center;">Your offer has been accepted, we have enjoyed working with you and we're glad that you have found your dream home.</p>
+               <button onclick="closeButton()" class="btn">DONE</button>
+        </div>
+        
+</div>
 
 
 
@@ -200,10 +209,12 @@
                                             </div>
                         </div>
                 </div>
-                                    <button class="btn">PAY NOW</button>
+                                    <button onclick="payNow()" class="btn">PAY NOW</button>
                                     <button onclick="closeButton()" class="btn2">DECLINE</button>       
         </div>
 </div>
+
+
 <section id="cards" class="hide"> 
     <div class="container">
         <p style="text-align: center; color:#1ab2ff; font-size: 20px;">What type of Card are you using?</p>
@@ -286,7 +297,7 @@
     
 <hr style="border:none;" id="contactId">
     <br>
-    <br>
+
 
     <section id="contact">
         <div class="container">
@@ -412,6 +423,7 @@
         });
 const cards = document.getElementById('cards');
 const paymentForm = document.getElementById('paymentForm');
+const congratsMessage= document.getElementById('congrats');
 
 function buyButton(){
 cards.classList.remove('hide');
@@ -423,6 +435,11 @@ cards.classList.add('hide');
 function closeButton(){
 paymentForm.classList.add('hide');
 cards.classList.add('hide');
+congratsMessage.classList.add('hide');
+}
+function payNow(){
+paymentForm.classList.add('hide');
+congratsMessage.classList.remove('hide');
 }
 
 
