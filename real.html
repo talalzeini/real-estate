@@ -173,9 +173,6 @@
 <div id="paymentForm" class="wrap hide">
     
         <div class="payment">
-            <div class="icon-relative">
-                <button onclick="closeButton()" style="font-size:25px;position:absolute;left:275px;background-color: transparent; border: none;" class="fas fa-times-circle"></button>
-            </div>
             <h2> Payment </h2>
                 <div class="form">
                         <div class="card space icon-relative">
@@ -203,10 +200,32 @@
                                             </div>
                         </div>
                 </div>
-                                    <div class="btn">PAY NOW</div>       
+                                    <button class="btn">PAY NOW</button>
+                                    <button onclick="closeButton()" class="btn2">DECLINE</button>       
         </div>
 </div>
+<section id="cards" class="hide"> 
+    <div class="container">
+        <p style="text-align: center; color:#1ab2ff; font-size: 20px;">What type of Card are you using?</p>
 
+        <div class="flex">
+            <div class="card">
+                <input onclick="chooseCard()" class="visa" type="image" src="visa.jpg" />
+               
+            </div>
+            <div class="card">
+                <input onclick="chooseCard()"  class="visa" type="image" src="master.jpg" />
+                
+            </div>
+            <div class="card">
+                <input onclick="chooseCard()"  class="visa" type="image" src="paypal.jpg" />
+               
+            </div>
+        </div>
+    </div>
+   
+    
+</section>
 
 
 
@@ -240,21 +259,21 @@
                     <img src="left.jpg" />
                     <h3>Talal Zeini</h3>
                     <p>Real Estate Agent</p>
-                    <button style=" text-align:center; display: block; margin:auto; width:175px;margin-bottom: 30px; " class="rounded">Contact</button>
+                    <a href="#contactId" style=" text-align:center; display: block; margin:auto; width:175px;margin-bottom: 30px; " class="rounded">Contact</a>
                 </div>
 
                 <div class="card">
                     <img  src="middle.jpg" />
                     <h3>Talal Zeini</h3>
                     <p>Real Estate Agent</p>
-                    <button style=" text-align:center; display: block; margin:auto; width:175px;margin-bottom: 30px; " class="rounded">Contact</button>
+                    <a href="#contactId" style=" text-align:center; display: block; margin:auto; width:175px;margin-bottom: 30px; " class="rounded">Contact</a>
                 </div>
 
                 <div class="card">
                     <img src="right.jpg" />
                     <h3>Talal Zeini</h3>
                     <p>Real Estate Agent</p>
-                    <button style=" text-align:center; display: block; margin:auto; width:175px; margin-bottom: 30px;" class="rounded">Contact</button>
+                    <a href="#contactId" style=" text-align:center; display: block; margin:auto; width:175px;margin-bottom: 30px; " class="rounded">Contact</a>
                 </div>
              
                 
@@ -391,16 +410,19 @@
                 ]
            });
         });
- 
-      function buyButton(){
-
-          const paymentForm = document.getElementById('paymentForm');
-          paymentForm.classList.remove('hide');
-      }
-      function closeButton(){
-
+const cards = document.getElementById('cards');
 const paymentForm = document.getElementById('paymentForm');
+
+function buyButton(){
+cards.classList.remove('hide');
+}
+function chooseCard(){
+paymentForm.classList.remove('hide');
+cards.classList.add('hide');
+}
+function closeButton(){
 paymentForm.classList.add('hide');
+cards.classList.add('hide');
 }
 
 

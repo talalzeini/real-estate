@@ -27,6 +27,7 @@ body{
     display:flex;
     justify-content:space-between;
 }
+
 h1,h2,h3,h4,h5{
     margin:0;
     padding:0;
@@ -74,6 +75,24 @@ button.rounded{
 }
 button.rounded:hover{
     color:#1ab2ff;
+    background:  white;
+
+}
+a.rounded{
+    background:  #1ab2ff;
+    border:none;
+    text-decoration: none;
+    color:white;
+    font-size:16px;
+    border-radius: 30px;
+    padding:10px 30px;
+    line-height: 1.5;
+    border:3px solid #1ab2ff ;
+    cursor: pointer;
+}
+a.rounded:hover{
+    color:#1ab2ff;
+    text-decoration: none;
     background:  white;
 
 }
@@ -278,6 +297,38 @@ header ul.is-sticky li a:hover, header ul.is-sticky li a.active{
    padding-left: 1rem;
 }
 /* agents styles end */
+
+/* cards styles start */
+#cards {
+    margin:4rem 0 6rem;
+    padding:0 0 6rem;
+   
+}
+
+#cards .flex {
+    flex-wrap:wrap;
+    padding:0;
+}
+#cards .card {
+    width:32%;
+    margin-bottom:2rem;
+}
+#cards .card img {
+    width:100%;
+    border:1px solid;
+}
+#cards .card input {
+    width:100%;
+    border:4px solid white;
+}
+#cards .card input:hover {
+    width:100%;
+    transition: all 1s;
+
+    border:4px solid #1ab2ff;
+}
+
+/* cards styles end */
 
 /* services styles start */
 #services {
@@ -867,13 +918,39 @@ padding:20px;
 }
 .btn{
     margin-top:40px;
-    background:#2196f3;
+    background:#1ab2ff;
     text-align: center;
-    padding:12px;
-    letter-spacing: 1px;
+    padding:15px;
+    font-size:15px;
+    width:100%;
+    letter-spacing: 1.5px;
     color:#f8f8f8;
     border-radius: 5px;
     cursor: pointer;
+    border:2px solid #1ab2ff;
+}
+.btn:hover{
+    transition: all 0.1s;
+    background:white;
+    color:#1ab2ff;
+}
+.btn2{
+    margin-top:20px;
+    background:#1ab2ff;
+    text-align: center;
+    padding:15px;
+    font-size:15px;
+    width:100%;
+    letter-spacing: 1.5px;
+    color:#f8f8f8;
+    border-radius: 5px;
+    cursor: pointer;
+    border:2px solid #1ab2ff;
+}
+.btn2:hover{
+    transition: all 0.1s;
+    background:white;
+    color:#1ab2ff;
 }
 @media only screen and (max-width:420px){
     .card-grp{
