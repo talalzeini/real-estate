@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>STATED.</title>
+    <title>Real Estate Example</title>
 
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link href="real.css" type="text/css" rel="Stylesheet" />
@@ -12,27 +12,25 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/95dc93da07.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
 </head>
 
-<body>
+<body id="home">
+
+
     <div id="header-hero-container">
         <header>
             <div class="flex container">
                 <a id="logo" href="#"></a>
                 <nav>
-                    <button id="nav-toggle" class="hamburger-menu">
-                        <span class="strip"></span>
-                        <span class="strip"></span>
-                        <span class="strip"></span>
-                    </button>
+                   
 
                     <ul id="nav-menu">
-                        <li><a href="#" class="active">Home</a></li>
-                        <li><a href="http://www.google.com" target="_blank">Properties</a></li>
-                        <li><a href="#">Agents</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">News</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#servicesId">Services</a></li>
+                        <li><a href="#propertiesId">Properties</a></li>
+                        <li><a href="#agentsId">Agents</a></li>
+                        <li><a href="#contactId">Contact</a></li>
                         <li id="close-flyout"><span class="fas fa-times"></span></li>
                     </ul>
                 </nav>
@@ -41,41 +39,57 @@
         
         <section id="hero">
             <div class="fade"></div>
-            <div class="hero-text">
+            <div class="hero-text"  >
                 <h1>Buy and sell real estate properties</h1>
                 <p>Lorem ipsum dolor sit amet consectectur adipisicing elit. Laboriosam assumenda ea quo cupiditate facere deleniti fuga officia.</p>
             </div>
         </section>
-    </div>
 
-    <section id="how-it-works">
+    </div>
+  
+    <div id="servicesId"></div>
+  
+    <section id="services">
         <div class="container">
-            <h2>How It Works</h2>
+            <h2>Services</h2>
             <div class="flex">
                 <div>
-                    <span class="fas fa-home"></span>
-                    <h4>Find a Property.</h4>
-                    <p>Lorem ipsum dolor sit amet consectectur adipisicing elit.</p>
+                    <div class="fas fa-home"></div>
+                    <div class="services-card-right">
+                        <h3>Search Property</h3>
+                        <p>Looking for your Dream Home? Let us help you find it! Check out all houses for sale and come join us for a free open house.</p>
+                        <a href="#">Learn More</a>
+                    </div>
                 </div>
 
                 <div>
-                    <span class="fas fa-dollar-sign"></span>
-                    <h4>Buy a Property.</h4>
-                    <p>Lorem ipsum dolor sit amet consectectur adipisicing elit.</p>
+                    <div class="fas fa-dollar-sign"></div>
+                    <div class="services-card-right">
+                        <h3>Buy Property</h3>
+                        <p>Have a house on your mind? Make the final offer! Choose the house you're willing to buy so you could sign the offer. </p>
+                        <a href="#">Learn More</a>
+                    </div>
                 </div>
 
+               
+
                 <div>
-                    <span class="fas fa-chart-line"></span>
-                    <h4>Investing.</h4>
-                    <p>Lorem ipsum dolor sit amet consectectur adipisicing elit.</p>
+                    <div class="fas fa-building"></div>
+                    <div class="services-card-right">
+                        <h3>List a Property</h3>
+                        <p>Moving out? List your property in minutes! Upload pictures of your house. Let us know its location, and share some details. </p>
+                        <a href="#">Learn More</a>
+                    </div>
                 </div>
             </div>
         </div>
+        <div id="propertiesId"></div>
     </section>
+  
 
     <section id="properties">
         <div class="container">
-            <h2>Properties</h2>
+            <h2 style="text-align: center;">Properties</h2>
             <div id="properties-slider" class="slick">
                 <div>
                     <img src="https://onclickwebdesign.com/wp-content/uploads/property_1.jpg" alt="Property 1" />
@@ -88,230 +102,176 @@
                             480 12th, Unit 14, San Francisco, CA
                         </address>
                     </div>
+                    <button onclick="buyButton()" style=" text-align:center; display: block; margin:auto; width:100px; margin-top: 20px;" class="rounded">Buy</button>
                 </div>
 
                 <div>
                     <img src="https://onclickwebdesign.com/wp-content/uploads/property_2.jpg" alt="Property 1" />
                     <div class="property-details">
-                        <p class="price">$3,400,000</p>
-                        <span class="beds">6 beds</span>
-                        <span class="baths">4 baths</span>
-                        <span class="sqft">4,250 sqft.</span>
+                        <p class="price">$400,000</p>
+                        <span class="beds">2 beds</span>
+                        <span class="baths">2 baths</span>
+                        <span class="sqft">1,250 sqft.</span>
                         <address>
                             480 12th, Unit 14, San Francisco, CA
                         </address>
                     </div>
+                    <button onclick="buyButton()" style=" text-align:center; display: block; margin:auto; width:100px; margin-top: 20px;" class="rounded">Buy</button>
                 </div>
 
                 <div>
                     <img src="https://onclickwebdesign.com/wp-content/uploads/property_3.jpg" alt="Property 1" />
                     <div class="property-details">
-                        <p class="price">$3,400,000</p>
-                        <span class="beds">6 beds</span>
-                        <span class="baths">4 baths</span>
-                        <span class="sqft">4,250 sqft.</span>
+                        <p class="price">$1,100,000</p>
+                        <span class="beds">4 beds</span>
+                        <span class="baths">3 baths</span>
+                        <span class="sqft">3,547 sqft.</span>
                         <address>
                             480 12th, Unit 14, San Francisco, CA
                         </address>
                     </div>
+                    <button onclick="buyButton()" style=" text-align:center; display: block; margin:auto; width:100px; margin-top: 20px;" class="rounded">Buy</button>
                 </div>
 
                 <div>
                     <img src="https://onclickwebdesign.com/wp-content/uploads/property_4.jpg" alt="Property 1" />
                     <div class="property-details">
-                        <p class="price">$3,400,000</p>
-                        <span class="beds">6 beds</span>
-                        <span class="baths">4 baths</span>
-                        <span class="sqft">4,250 sqft.</span>
+                        <p class="price">$760,000</p>
+                        <span class="beds">5 beds</span>
+                        <span class="baths">3 baths</span>
+                        <span class="sqft">3,950 sqft.</span>
                         <address>
                             480 12th, Unit 14, San Francisco, CA
                         </address>
                     </div>
+                    <button onclick="buyButton()" style=" text-align:center; display: block; margin:auto; width:100px; margin-top: 20px;" class="rounded">Buy</button>
                 </div>
 
                 <div>
                     <img src="https://onclickwebdesign.com/wp-content/uploads/property_1.jpg" alt="Property 1" />
                     <div class="property-details">
-                        <p class="price">$3,400,000</p>
+                        <p class="price">$2,700,000</p>
                         <span class="beds">6 beds</span>
-                        <span class="baths">4 baths</span>
-                        <span class="sqft">4,250 sqft.</span>
+                        <span class="baths">3 baths</span>
+                        <span class="sqft">5,125 sqft.</span>
                         <address>
                             480 12th, Unit 14, San Francisco, CA
                         </address>
                     </div>
+                    <button onclick="buyButton()" style=" text-align:center; display: block; margin:auto; width:100px; margin-top: 20px;" class="rounded">Buy</button>
                 </div>
             </div>
-
-            <button class="rounded">View All Property Listings</button>
+<div id="agentsId"></div>
+           
         </div>
     </section>
+
+
+
+
+
+<div id="paymentForm" class="wrap hide">
+    
+        <div class="payment">
+            <div class="icon-relative">
+                <button onclick="closeButton()" style="font-size:25px;position:absolute;left:275px;background-color: transparent; border: none;" class="fas fa-times-circle"></button>
+            </div>
+            <h2> Payment </h2>
+                <div class="form">
+                        <div class="card space icon-relative">
+                                <label for="" class="label">Card Holder:</label>
+                                <input type="text" class="input" name="card_holder" placeholder="Talal Zeini">
+                                <i class="fas fa-user"></i>
+                        </div>
+
+                        <div class="card space icon-relative">
+                            <label for="" class="label">Card number:</label>
+                            <input type="text" class="input" name="card_number" placeholder="5555 5555 5555 5555" data-mask="0000 0000 0000 0000">
+                            <i class="fas fa-credit-card"></i>
+                        </div>
+
+                        <div class="card-grp space icon-relative">
+                                    <div class="card-item">
+                                            <label for="" class="label">Expiry date:</label>
+                                            <input type="text" class="input" name="expiry_date" placeholder="01 / 20" data-mask="00 / 00">
+                                            <i class="far fa-calendar-alt"></i>
+                                    </div>
+                                            <div class="card-item icon-relative">
+                                                <label for="" class="label">CVC:</label>
+                                                <input type="text" class="input" name="cvc" placeholder="123" data-mask="000">
+                                                <i class="fas fa-lock"></i>
+                                            </div>
+                        </div>
+                </div>
+                                    <div class="btn">PAY NOW</div>       
+        </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     <section id="agents">
         <div class="container">
-            <h2>Agents</h2>
-            <p class="large-paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus minima neque tempora reiciendis.</p>
+            <h2 style="text-align: center;">Agents</h2>
+            <p style="text-align: center;">Here are several Real Estate Agents you could reach and contact.</p>
 
             <div class="flex">
                 <div class="card">
-                    <img src="https://onclickwebdesign.com/wp-content/uploads/person_1.jpg" alt="Realtor 1" />
-                    <h3>Kaiara Spencer</h3>
+                    <img src="left.jpg" />
+                    <h3>Talal Zeini</h3>
                     <p>Real Estate Agent</p>
+                    <button style=" text-align:center; display: block; margin:auto; width:175px;margin-bottom: 30px; " class="rounded">Contact</button>
                 </div>
 
                 <div class="card">
-                    <img src="https://onclickwebdesign.com/wp-content/uploads/person_2.jpg" alt="Realtor 1" />
-                    <h3>Dave Simpson</h3>
+                    <img  src="middle.jpg" />
+                    <h3>Talal Zeini</h3>
                     <p>Real Estate Agent</p>
+                    <button style=" text-align:center; display: block; margin:auto; width:175px;margin-bottom: 30px; " class="rounded">Contact</button>
                 </div>
 
                 <div class="card">
-                    <img src="https://onclickwebdesign.com/wp-content/uploads/person_3.jpg" alt="Realtor 1" />
-                    <h3>Ben Thompson</h3>
+                    <img src="right.jpg" />
+                    <h3>Talal Zeini</h3>
                     <p>Real Estate Agent</p>
+                    <button style=" text-align:center; display: block; margin:auto; width:175px; margin-bottom: 30px;" class="rounded">Contact</button>
                 </div>
-
-                <div class="card">
-                    <img src="https://onclickwebdesign.com/wp-content/uploads/person_4.jpg" alt="Realtor 1" />
-                    <h3>Kyla Stewart</h3>
-                    <p>Real Estate Agent</p>
-                </div>
-
-                <div class="card">
-                    <img src="https://onclickwebdesign.com/wp-content/uploads/person_5.jpg" alt="Realtor 1" />
-                    <h3>Rich Moffatt</h3>
-                    <p>Real Estate Agent</p>
-                </div>
-
-                <div class="card">
-                    <img src="https://onclickwebdesign.com/wp-content/uploads/person_6.jpg" alt="Realtor 1" />
-                    <h3>Stuart Redman</h3>
-                    <p>Real Estate Agent</p>
-                </div>
+             
+                
             </div>
         </div>
+       
+        
     </section>
 
-    <section id="the-best">
-        <div class="flex container">
-            <img src="https://onclickwebdesign.com/wp-content/uploads/property_1.jpg" alt="Property 1" />
-            <div>
-                <h2>We Are the Best Real Estate Company</h2>
-                <p class="large-paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                <p>Est qui eos quasi ratione nostrum excepturi id recusandae fugit omnis ullam pariatur itaque nisi voluptas impedit Quo suscipit omnis iste velit maxime.</p>
-                <ul>
-                    <li>Placeat maxime animi minus</li>
-                    <li>Placeat maxime animi minus</li>
-                    <li>Placeat maxime animi minus</li>
-                    <li>Placeat maxime animi minus</li>
-                    <li>Placeat maxime animi minus</li>
-                </ul>
-                <button class="rounded">Learn More</button>
-            </div>
-        </div>
-    </section>
-
-    <section id="services">
-        <div class="container">
-            <h2>Services</h2>
-            <div class="flex">
-                <div>
-                    <div class="fas fa-home"></div>
-                    <div class="services-card-right">
-                        <h3>Search Property</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.</p>
-                        <a href="#">Learn More</a>
-                    </div>
-                </div>
-
-                <div>
-                    <div class="fas fa-dollar-sign"></div>
-                    <div class="services-card-right">
-                        <h3>Buy Property</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.</p>
-                        <a href="#">Learn More</a>
-                    </div>
-                </div>
-
-                <div>
-                    <div class="fas fa-chart-line"></div>
-                    <div class="services-card-right">
-                        <h3>Investing</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.</p>
-                        <a href="#">Learn More</a>
-                    </div>
-                </div>
-
-                <div>
-                    <div class="fas fa-building"></div>
-                    <div class="services-card-right">
-                        <h3>List a Property</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.</p>
-                        <a href="#">Learn More</a>
-                    </div>
-                </div>
-
-                <div>
-                    <div class="fas fa-search"></div>
-                    <div class="services-card-right">
-                        <h3>Property Locator</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.</p>
-                        <a href="#">Learn More</a>
-                    </div>
-                </div>
-
-                <div>
-                    <div class="fas fa-mobile-alt"></div>
-                    <div class="services-card-right">
-                        <h3>Stated Apps</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.</p>
-                        <a href="#">Learn More</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="testimonials">
-        <div class="container">
-            <h2>What Our Clients Are Saying</h2>
-            <div id="testimonials-slider">
-                <div>
-                    <blockquote>
-                        <p>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia nostrum vitae explicabo dolore ratione. Quia iure quod ipsa blanditiis sint nulla a nam veritatis ex eos. Dicta molestiae dolorum laudantium."</p>
-                    </blockquote>
-                    <div class="testimonials-caption">
-                        <img src="https://onclickwebdesign.com/wp-content/uploads/person_7.jpg" alt="Client 7" />
-                        <p>Nick Andros</p>
-                    </div>
-                </div>
-
-                <div>
-                    <blockquote>
-                        <p>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia nostrum vitae explicabo dolore ratione. Quia iure quod ipsa blanditiis sint nulla a nam veritatis ex eos. Dicta molestiae dolorum laudantium."</p>
-                    </blockquote>
-                    <div class="testimonials-caption">
-                        <img src="https://onclickwebdesign.com/wp-content/uploads/person_5.jpg" alt="Client 7" />
-                        <p>Larry Underwood</p>
-                    </div>
-                </div>
-
-                <div>
-                    <blockquote>
-                        <p>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia nostrum vitae explicabo dolore ratione. Quia iure quod ipsa blanditiis sint nulla a nam veritatis ex eos. Dicta molestiae dolorum laudantium."</p>
-                    </blockquote>
-                    <div class="testimonials-caption">
-                        <img src="https://onclickwebdesign.com/wp-content/uploads/person_8.jpg" alt="Client 7" />
-                        <p>Fran Goldsmith</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    
+<hr style="border:none;" id="contactId">
+    <br>
+    <br>
 
     <section id="contact">
         <div class="container">
-            <h2>Contact Us</h2>
+            <h2>Contact</h2>
 
             <div class="flex">
                 <div id="form-container">
@@ -334,59 +294,62 @@
                 </div>
 
                 <div id="address-container">
-                    <label>Address</label>
-                    <address>
-                        20377 Evergreen Terrace Mountain View, California, USA 
-                    </address>
+                    
 
                     <label>Phone</label>
-                    <a href="#">232-232-2323</a>
+                    <a href="#">+1 (408) 818 0894</a>
 
                     <label>Email Address</label>
-                    <a href="#">ouremail@domain.com</a>
+                    <a href="#">talalzeinil@gmail.com</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer>
-        <div class="flex container">
-            <div class="footer-about">
-                <h5>About Stated</h5>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque facere laudantium magnam voluptatum autem. Amet aliquid nesciunt veritatis aliquam.</p>
-            </div>
+    <footer class="media">
 
-            <div class="footer-quick-links">
-                <h5>Quick Links</h5>
-                <ul>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Testimonials</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-subscribe">
-                <h5>Subscribe to our Newsletter</h5>
-                <div id="subscribe-container">
-                    <input type="text" placeholder="Enter Email" />
-                    <button class="right-rounded">Send</button>
-                </div>
-
-                <h5 class="follow-us">Follow Us</h5>
-                <ul>
-                    <li><a href="#"><span class="fab fa-facebook-f"></span></a></li>
-                    <li><a href="#"><span class="fab fa-twitter"></span></a></li>
-                    <li><a href="#"><span class="fab fa-instagram"></span></a></li>
-                    <li><a href="#"><span class="fab fa-linkedin-in"></span></a></li>
-                </ul>
-            </div>
+        <div class="col-lg-4" id="media">                                 
+            <ul>
+    
+            <!--- Instagram -->
+             
+                                <li id="fb">
+                                      <a href="https://www.instagram.com/talalzeini/">
+                                            <i  class="fab fa-instagram" aria-hidden="true"></i>
+                                      </a>
+                                </li>
+             
+            <!--- Twitter -->
+               
+                          <li id="yt" >
+                                <a href="https://www.twitter.com/talalzeini/">
+                                      <i  class="fa fa-twitter" aria-hidden="true"></i>
+                                </a>
+                          </li>
+            
+            <!--- Github -->         
+                    <li id="ig">
+                          <a  href="https://github.com/talalzeini">
+                                <i class="fa fa-github" aria-hidden="true"></i>
+                          </a>
+                    </li>
+              
+            <!--- Linkedin -->        
+          
+                                <li id="ig" >
+                                      <a href="https://www.linkedin.com/in/talal-zeini-931499193/">
+                                          <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                                      </a>
+                                </li>
+         
+              
+              
+            </ul>
+            <p style=" text-align:center; margin-left:50px;margin-top:50px; letter-spacing:2px;font-size:17px;"><span  style="font-size:17px; text-align:center;">&copy</span> Talal Zeini 2020</p>
         </div>
-
-        <small>
-            Copyright &copy; 2019 All rights reserved | This template is made with <span class="fa fa-heart"></span> by <a href="https://colorlib.com">Colorlib</a>
-        </small>
     </footer>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
     <script>
         $(function () {
             let headerElem = $('header');
@@ -397,8 +360,9 @@
            $('#properties-slider').slick({
                 slidesToShow: 4,
                 slidesToScroll: 1,
-                prevArrow: '<a href="#" class="slick-arrow slick-prev">previous</a>',
-                nextArrow: '<a href="#" class="slick-arrow slick-next">next</a>',
+                autoplay:true,
+                autoplaySpeed:2500,
+                arrows:false,
                 responsive: [
                     {
                         breakpoint: 1100,
@@ -426,9 +390,24 @@
                     }
                 ]
            });
- 
         });
+ 
+      function buyButton(){
+
+          const paymentForm = document.getElementById('paymentForm');
+          paymentForm.classList.remove('hide');
+      }
+      function closeButton(){
+
+const paymentForm = document.getElementById('paymentForm');
+paymentForm.classList.add('hide');
+}
+
+
+     
+      
     </script>
+
 
 
 
