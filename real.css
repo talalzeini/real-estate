@@ -62,6 +62,49 @@ h5{
 p{
     margin: 0 0 1rem;
 }
+.buyButton
+{
+text-align:center;
+display: block;
+margin:auto; 
+width:100px;
+font-size:16px;
+margin-top: 20px;
+border-radius: 30px;
+background:  #1ab2ff;
+border:none;
+padding:10px 30px;
+color:white;
+line-height: 1.5;
+border:3px solid #1ab2ff ;
+cursor: pointer;
+}
+.buyButton:hover{
+    color:#1ab2ff;
+    background:  white;
+}
+
+.selectButton
+{
+text-align:center;
+display: block;
+margin:auto; 
+width:150px;
+font-size:16px;
+margin-top: 20px;
+border-radius: 30px;
+background:  #1ab2ff;
+border:none;
+padding:10px 30px;
+color:white;
+line-height: 1.5;
+border:3px solid #1ab2ff ;
+cursor: pointer;
+}
+.selectButton:hover{
+    color:#1ab2ff;
+    background:  white;
+}
 button.rounded{
     background:  #1ab2ff;
     border:none;
@@ -76,7 +119,6 @@ button.rounded{
 button.rounded:hover{
     color:#1ab2ff;
     background:  white;
-
 }
 a.rounded{
     background:  #1ab2ff;
@@ -217,6 +259,7 @@ header ul.is-sticky li a:hover, header ul.is-sticky li a.active{
 #properties .container{
     position:relative;
 }
+
 #properties-slider a.slick-prev{
     right:80px;
 }
@@ -225,6 +268,7 @@ header ul.is-sticky li a:hover, header ul.is-sticky li a.active{
 }
 #properties-slider img{
     width:100%;
+    height:100%;
     display: block;
 }
 #properties-slider .property-details{
@@ -966,3 +1010,110 @@ padding:20px;
 transform: scale(1.1);
 }
 
+
+
+
+
+
+#properties-sliderr a.slick-prev{
+    right:80px;
+}
+#properties-sliderr .slick-slide{
+    padding:0 15px;
+}
+#properties-sliderr img{
+    width:100%;
+    display: block;
+}
+#properties-sliderr img:hover{
+    width:100%;
+    display: block;
+}
+#properties-sliderr .property-details{
+    padding:1rem;
+}
+#properties-sliderr .price{
+    font-size:1.2rem;
+    color:#343a40;
+    font-weight:800;
+    margin: 0 0 0.5rem 0;
+}
+#properties-sliderr .property-details span{
+    font-size:0.8rem;
+    padding-right: 15px;
+}
+#properties-sliderr .property-details span.baths{
+    padding-left: 10px;
+}
+#properties-sliderr .property-details span.sqft{
+    padding-right: 0px;
+    padding-left: 10px;
+}
+#properties-sliderr .property-details span.baths,
+#properties-sliderr .property-details span.beds{
+    border-right:1px solid #888;
+}
+#properties-sliderr .property-details address{
+    font-size:0.8rem;
+    font-style: normal;
+    margin-top: 0.5rem;
+}
+
+
+
+
+
+.price-table{
+    padding:60px 0;   text-align: center;
+}
+.single-price{
+    margin:10px auto;
+    background:#efefef;
+    transition: 0.5s;
+    display: inline-block;
+    width: 300px;
+    text-align: center;
+}
+/* .single-price:hover{
+    box-shadow: 0 2px 20px #ccc;
+} */
+.price-head{
+    
+    background:#2196f3;
+    display:block;
+    margin: 0 auto;
+    padding:10px 5px;
+    text-align: center;
+}
+
+.price-head p{
+    margin-top: 0px;
+    color:white;
+    font-size:25px;
+    line-height:30px;
+    font-weight:lighter;
+    letter-spacing: 1px;
+    opacity: 0.7;
+}
+.price-head p span {
+    font-size:15px;
+    color:white;
+    font-weight:lighter;
+}
+.price-bottom{
+    padding: 20px;
+}
+.price-bottom button{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.price-head h2{
+    color:white;
+    font-size:30px;
+    letter-spacing: 2px;
+    font-weight:bold;
+    margin-bottom:0;
+    padding:10px;
+    text-transform: uppercase;
+}

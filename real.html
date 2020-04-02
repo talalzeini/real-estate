@@ -7,7 +7,7 @@
     <title>Real Estate Example</title>
 
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-    <link href="real.css" type="text/css" rel="Stylesheet" />
+    <link href="real.css" type="text/css" rel="stylesheet" />
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/95dc93da07.js"></script>
@@ -16,8 +16,6 @@
 </head>
 
 <body id="home">
-
-
     <div id="header-hero-container">
         <header>
             <div class="flex container">
@@ -83,30 +81,15 @@
                 </div>
             </div>
         </div>
-        <div id="propertiesId"></div>
     </section>
-  
+
 
     <section id="properties">
         <div class="container">
             <h2 style="text-align: center;">Properties</h2>
             <div id="properties-slider" class="slick">
                 <div>
-                    <img src="https://onclickwebdesign.com/wp-content/uploads/property_1.jpg" alt="Property 1" />
-                    <div class="property-details">
-                        <p class="price">$3,400,000</p>
-                        <span class="beds">6 beds</span>
-                        <span class="baths">4 baths</span>
-                        <span class="sqft">4,250 sqft.</span>
-                        <address>
-                            480 12th, Unit 14, San Francisco, CA
-                        </address>
-                    </div>
-                    <button onclick="buyButton()" style=" text-align:center; display: block; margin:auto; width:100px; margin-top: 20px;" class="rounded">Buy</button>
-                </div>
-
-                <div>
-                    <img src="https://onclickwebdesign.com/wp-content/uploads/property_2.jpg" alt="Property 1" />
+                    <img src="https://onclickwebdesign.com/wp-content/uploads/property_3.jpg" alt="Property 1" />
                     <div class="property-details">
                         <p class="price">$400,000</p>
                         <span class="beds">2 beds</span>
@@ -116,11 +99,11 @@
                             480 12th, Unit 14, San Francisco, CA
                         </address>
                     </div>
-                    <button onclick="buyButton()" style=" text-align:center; display: block; margin:auto; width:100px; margin-top: 20px;" class="rounded">Buy</button>
+                    <button id="buyButton2" onclick="buyButton(), fourthHouseBuy()" class="buyButton">Buy</button>
                 </div>
 
                 <div>
-                    <img src="https://onclickwebdesign.com/wp-content/uploads/property_3.jpg" alt="Property 1" />
+                    <img src="https://onclickwebdesign.com/wp-content/uploads/property_1.jpg" alt="Property 1" />
                     <div class="property-details">
                         <p class="price">$1,100,000</p>
                         <span class="beds">4 beds</span>
@@ -130,11 +113,11 @@
                             480 12th, Unit 14, San Francisco, CA
                         </address>
                     </div>
-                    <button onclick="buyButton()" style=" text-align:center; display: block; margin:auto; width:100px; margin-top: 20px;" class="rounded">Buy</button>
+                    <button id="buyButton3" onclick="buyButton(), thirdHouseBuy()" class="buyButton" >Buy</button>
                 </div>
 
                 <div>
-                    <img src="https://onclickwebdesign.com/wp-content/uploads/property_4.jpg" alt="Property 1" />
+                    <img src="https://onclickwebdesign.com/wp-content/uploads/property_2.jpg" alt="Property 1" />
                     <div class="property-details">
                         <p class="price">$760,000</p>
                         <span class="beds">5 beds</span>
@@ -144,28 +127,25 @@
                             480 12th, Unit 14, San Francisco, CA
                         </address>
                     </div>
-                    <button onclick="buyButton()" style=" text-align:center; display: block; margin:auto; width:100px; margin-top: 20px;" class="rounded">Buy</button>
+                    <button id="buyButton4" onclick="buyButton(),secondHouseBuy()" class="buyButton">Buy</button>
                 </div>
-
                 <div>
-                    <img src="https://onclickwebdesign.com/wp-content/uploads/property_1.jpg" alt="Property 1" />
+                    <img src="https://onclickwebdesign.com/wp-content/uploads/property_4.jpg" alt="Property 1" />
                     <div class="property-details">
-                        <p class="price">$2,700,000</p>
+                        <p class="price" id="aPrice">$3,400,000</p>
                         <span class="beds">6 beds</span>
-                        <span class="baths">3 baths</span>
-                        <span class="sqft">5,125 sqft.</span>
+                        <span class="baths">4 baths</span>
+                        <span class="sqft">4,250 sqft.</span>
                         <address>
                             480 12th, Unit 14, San Francisco, CA
                         </address>
                     </div>
-                    <button onclick="buyButton()" style=" text-align:center; display: block; margin:auto; width:100px; margin-top: 20px;" class="rounded">Buy</button>
+                    <button id="buyButton1" onclick="buyButton(), firstHouseBuy()" class="buyButton" >Buy</button> 
                 </div>
             </div>
 <div id="agentsId"></div>
-           
         </div>
     </section>
-
 
     <div id="congrats" class="wrap hide">
     
@@ -186,25 +166,25 @@
                 <div class="form">
                         <div class="card space icon-relative">
                                 <label for="" class="label">Card Holder:</label>
-                                <input type="text" class="input" name="card_holder" placeholder="Talal Zeini">
+                                <input id="cardholder" type="text" class="input" name="card_holder" placeholder="Talal Zeini">
                                 <i class="fas fa-user"></i>
                         </div>
 
                         <div class="card space icon-relative">
                             <label for="" class="label">Card number:</label>
-                            <input type="text" class="input" name="card_number" placeholder="5555 5555 5555 5555" data-mask="0000 0000 0000 0000">
+                            <input id="cardnumber" type="text" class="input" name="card_number" placeholder="5555 5555 5555 5555" data-mask="0000 0000 0000 0000">
                             <i class="fas fa-credit-card"></i>
                         </div>
 
                         <div class="card-grp space icon-relative">
                                     <div class="card-item">
                                             <label for="" class="label">Expiry date:</label>
-                                            <input type="text" class="input" name="expiry_date" placeholder="01 / 20" data-mask="00 / 00">
+                                            <input id="expire" type="text" class="input" name="expiry_date" placeholder="01 / 20" data-mask="00 / 00">
                                             <i class="far fa-calendar-alt"></i>
                                     </div>
                                             <div class="card-item icon-relative">
                                                 <label for="" class="label">CVC:</label>
-                                                <input type="text" class="input" name="cvc" placeholder="123" data-mask="000">
+                                                <input id="cvc" type="text" class="input" name="cvc" placeholder="123" data-mask="000">
                                                 <i class="fas fa-lock"></i>
                                             </div>
                         </div>
@@ -236,6 +216,70 @@
     </div>
    
     
+</section>
+
+
+<section  class="price-table">
+    <div  id="plans" class="contain hide">
+        <h2 style="text-align: center;">Payment Plan</h2>
+        <p style="text-align: center; color:#1ab2ff; font-size: 20px;">Choose a payment plan that suits you.</p>
+            <div class="single-price">
+                <div class="price-head">
+                    <h2>BASIC</h2>
+                    <p>40 years.</p>
+                    <p id="basicMonth"></p>
+                    <p id="basicYear"></p>
+                </div>
+                    <div class="price-content">
+                        
+                    </div>
+                    <div class="price-bottom">
+                        <button onclick="selectPlan()" class="selectButton" >Select plan</button>
+                    </div>  
+            </div>
+            <div class="single-price">
+                <div class="price-head">
+                    <h2>PREMIUM</h2>
+                    <p>30 years.</p>
+                    <p id="premiumMonth"></p>
+                    <p id="premiumYear"></p>
+                </div>
+                    <div class="price-content">
+                        
+                    </div>
+                    <div class="price-bottom">
+                        <button onclick="selectPlan()"  class="selectButton" >Select plan</button>
+                    </div>  
+            </div>
+            <div class="single-price">
+                <div class="price-head">
+                    <h2>ADVANCED</h2>
+                    <p>20 years.</p>
+                    <p id="advancedMonth"></p>
+                    <p id="advancedYear"></p>
+                </div>
+                    <div class="price-content">
+                        
+                    </div>
+                    <div class="price-bottom">
+                        <button onclick="selectPlan()" class="selectButton" >Select plan</button>
+                    </div>  
+            </div>
+            <div class="single-price">
+                <div class="price-head">
+                    <h2>PROFESSIONAL</h2>
+                    <p>15 years.</p>
+                    <p id="proMonth"></p>
+                    <p id="proYear"></p>
+                </div>
+                    <div class="price-content">
+                        
+                    </div>
+                    <div class="price-bottom">
+                        <button onclick="selectPlan()" class="selectButton" >Select plan</button>
+                    </div>  
+            </div>
+    </div>
 </section>
 
 
@@ -379,77 +423,90 @@
         </div>
     </footer>
 
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
-    <script>
-        $(function () {
-            let headerElem = $('header');
-            let logo = $('#logo');
-            let navMenu = $('#nav-menu');
-            let navToggle = $('#nav-toggle');
-
-           $('#properties-slider').slick({
-                slidesToShow: 4,
-                slidesToScroll: 1,
-                autoplay:true,
-                autoplaySpeed:2500,
-                arrows:false,
-                responsive: [
-                    {
-                        breakpoint: 1100,
-                        settings: {
-                            slidesToShow: 3,
-                            slidesToScroll: 1,
-                            infinite: true,
-                        }
-                    },
-                    {
-                        breakpoint: 767,
-                        settings: {
-                            slidesToShow: 2,
-                            slidesToScroll: 1,
-                            infinite: true,
-                        }
-                    },
-                    {
-                        breakpoint: 530,
-                        settings: {
-                            slidesToShow: 1,
-                            slidesToScroll: 1,
-                            infinite: true,
-                        }
-                    }
-                ]
-           });
-        });
-const cards = document.getElementById('cards');
-const paymentForm = document.getElementById('paymentForm');
-const congratsMessage= document.getElementById('congrats');
-
-function buyButton(){
-cards.classList.remove('hide');
-}
-function chooseCard(){
-paymentForm.classList.remove('hide');
-cards.classList.add('hide');
-}
-function closeButton(){
-paymentForm.classList.add('hide');
-cards.classList.add('hide');
-congratsMessage.classList.add('hide');
-}
-function payNow(){
-paymentForm.classList.add('hide');
-congratsMessage.classList.remove('hide');
-}
-
-
-     
-      
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+    <script src="real.js">
+        
     </script>
+    <script>
+    const basicMonth = document.getElementById('basicMonth');
+    const basicYear = document.getElementById('basicYear');
 
+    const premiumMonth = document.getElementById('premiumMonth');
+    const premiumYear = document.getElementById('premiumYear');
 
+    const advancedMonth = document.getElementById('advancedMonth');
+    const advancedYear = document.getElementById('advancedYear');
+    
+    const proMonth = document.getElementById('proMonth');
+    const proYear = document.getElementById('proYear');
+function selectPlan(){
+    const selPlans = document.getElementById('plans');
+    console.log('working');
+    selPlans.classList.add('hide');
+    cards.classList.remove('hide');
+    propertiesSection.classList.add('hide');
+}
+function firstHouseBuy(){
+    var price = "3400000";
+// basic plan
+    basicMonth.innerHTML += "$" + (parseInt((price/40)/12)) + "<span>per month</span>";
+    basicYear.innerHTML += "$" + (parseInt(price/40)) + "<span>per year</span>";
+// premium plan
+    premiumMonth.innerHTML += "$" + (parseInt((price/30)/12)) + "<span>per month</span>";
+    premiumYear.innerHTML += "$" + (parseInt(price/30)) + "<span>per year</span>";
+// advanced plan
+    advancedMonth.innerHTML += "$" + (parseInt((price/20)/12)) + "<span>per month</span>";
+    advancedYear.innerHTML += "$" + (parseInt(price/20)) + "<span>per year</span>";
+// pro plan
+    proMonth.innerHTML += "$" + (parseInt((price/15)/12)) + "<span>per month</span>";
+    proYear.innerHTML += "$" + (parseInt(price/15)) + "<span>per year</span>";  
+}
+function secondHouseBuy(){
+    var price = "760000";
+// basic plan
+    basicMonth.innerHTML += "$" + (parseInt((price/40)/12)) + "<span>per month</span>";
+    basicYear.innerHTML += "$" + (parseInt(price/40)) + "<span>per year</span>";
+// premium plan
+    premiumMonth.innerHTML += "$" + (parseInt((price/30)/12)) + "<span>per month</span>";
+    premiumYear.innerHTML += "$" + (parseInt(price/30)) + "<span>per year</span>";
+// advanced plan
+    advancedMonth.innerHTML += "$" + (parseInt((price/20)/12)) + "<span>per month</span>";
+    advancedYear.innerHTML += "$" + (parseInt(price/20)) + "<span>per year</span>";
+// pro plan
+    proMonth.innerHTML += "$" + (parseInt((price/15)/12)) + "<span>per month</span>";
+    proYear.innerHTML += "$" + (parseInt(price/15)) + "<span>per year</span>";  
+}
 
-
-
+function thirdHouseBuy(){
+    var price = "1100000";
+// basic plan
+    basicMonth.innerHTML += "$" + (parseInt((price/40)/12)) + "<span>per month</span>";
+    basicYear.innerHTML += "$" + (parseInt(price/40)) + "<span>per year</span>";
+// premium plan
+    premiumMonth.innerHTML += "$" + (parseInt((price/30)/12)) + "<span>per month</span>";
+    premiumYear.innerHTML += "$" + (parseInt(price/30)) + "<span>per year</span>";
+// advanced plan
+    advancedMonth.innerHTML += "$" + (parseInt((price/20)/12)) + "<span>per month</span>";
+    advancedYear.innerHTML += "$" + (parseInt(price/20)) + "<span>per year</span>";
+// pro plan
+    proMonth.innerHTML += "$" + (parseInt((price/15)/12)) + "<span>per month</span>";
+    proYear.innerHTML += "$" + (parseInt(price/15)) + "<span>per year</span>";  
+}
+function fourthHouseBuy(){
+    var price = "400000";
+// basic plan
+    basicMonth.innerHTML += "$" + (parseInt((price/40)/12)) + "<span>per month</span>";
+    basicYear.innerHTML += "$" + (parseInt(price/40)) + "<span>per year</span>";
+// premium plan
+    premiumMonth.innerHTML += "$" + (parseInt((price/30)/12)) + "<span>per month</span>";
+    premiumYear.innerHTML += "$" + (parseInt(price/30)) + "<span>per year</span>";
+// advanced plan
+    advancedMonth.innerHTML += "$" + (parseInt((price/20)/12)) + "<span>per month</span>";
+    advancedYear.innerHTML += "$" + (parseInt(price/20)) + "<span>per year</span>";
+// pro plan
+    proMonth.innerHTML += "$" + (parseInt((price/15)/12)) + "<span>per month</span>";
+    proYear.innerHTML += "$" + (parseInt(price/15)) + "<span>per year</span>";  
+}
+    </script>
 </body>
 </html>
