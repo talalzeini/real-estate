@@ -219,10 +219,12 @@
 </section>
 
 
-<section  class="price-table">
-    <div  id="plans" class="contain hide">
-        <h2 style="text-align: center;">Payment Plan</h2>
+<section id="plans"  class="price-table hide">
+    <div   class="contain">
+        <h2 style="text-align: center; ">Payment Plan</h2>
         <p style="text-align: center; color:#1ab2ff; font-size: 20px;">Choose a payment plan that suits you.</p>
+        <p style="font-size: 35px;color:#1ab2ff;" id="headerPayment"></p>
+
             <div class="single-price">
                 <div class="price-head">
                     <h2>BASIC</h2>
@@ -272,13 +274,23 @@
                     <p id="proMonth"></p>
                     <p id="proYear"></p>
                 </div>
-                    <div class="price-content">
-                        
-                    </div>
+                
+                    
                     <div class="price-bottom">
                         <button onclick="selectPlan()" class="selectButton" >Select plan</button>
                     </div>  
             </div>
+    </div>
+    <div class="single-price">
+        <div class="price-head">
+            <h2>One Payment</h2>
+           <p id="onePayment"></p>
+        </div>
+        
+            
+            <div class="price-bottom">
+                <button onclick="selectPlan()" class="selectButton" >Select plan</button>
+            </div>  
     </div>
 </section>
 
@@ -439,6 +451,10 @@
     
     const proMonth = document.getElementById('proMonth');
     const proYear = document.getElementById('proYear');
+
+    const headerPayment = document.getElementById('headerPayment');
+    const onePayment = document.getElementById('onePayment');
+    "onePayment"
 function selectPlan(){
     const selPlans = document.getElementById('plans');
     console.log('working');
@@ -460,6 +476,9 @@ function firstHouseBuy(){
 // pro plan
     proMonth.innerHTML += "$" + (parseInt((price/15)/12)) + "<span>per month</span>";
     proYear.innerHTML += "$" + (parseInt(price/15)) + "<span>per year</span>";  
+
+    onePayment.innerText += "$3,400,000";
+    headerPayment.innerText += "$3,400,000";
 }
 function secondHouseBuy(){
     var price = "760000";
@@ -475,6 +494,9 @@ function secondHouseBuy(){
 // pro plan
     proMonth.innerHTML += "$" + (parseInt((price/15)/12)) + "<span>per month</span>";
     proYear.innerHTML += "$" + (parseInt(price/15)) + "<span>per year</span>";  
+
+    onePayment.innerText += "$760,000";
+    headerPayment.innerText  += "$760,000";
 }
 
 function thirdHouseBuy(){
@@ -490,7 +512,10 @@ function thirdHouseBuy(){
     advancedYear.innerHTML += "$" + (parseInt(price/20)) + "<span>per year</span>";
 // pro plan
     proMonth.innerHTML += "$" + (parseInt((price/15)/12)) + "<span>per month</span>";
-    proYear.innerHTML += "$" + (parseInt(price/15)) + "<span>per year</span>";  
+    proYear.innerHTML += "$" + (parseInt(price/15)) + "<span>per year</span>"; 
+    
+    onePayment.innerText += "$1,100,000";
+    headerPayment.innerText  += "$1,100,000";
 }
 function fourthHouseBuy(){
     var price = "400000";
@@ -506,6 +531,9 @@ function fourthHouseBuy(){
 // pro plan
     proMonth.innerHTML += "$" + (parseInt((price/15)/12)) + "<span>per month</span>";
     proYear.innerHTML += "$" + (parseInt(price/15)) + "<span>per year</span>";  
+
+    onePayment.innerText += "$400,000";
+    headerPayment.innerText  += "$400,000";
 }
     </script>
 </body>
