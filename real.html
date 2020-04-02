@@ -455,6 +455,11 @@
     const headerPayment = document.getElementById('headerPayment');
     const onePayment = document.getElementById('onePayment');
     "onePayment"
+function thousands_separators(num){
+    var num_parts = num.toString().split(".");
+    num_parts[0] = num_parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    return num_parts.join(".");
+}
 function selectPlan(){
     const selPlans = document.getElementById('plans');
     console.log('working');
@@ -465,17 +470,17 @@ function selectPlan(){
 function firstHouseBuy(){
     var price = "3400000";
 // basic plan
-    basicMonth.innerHTML += "$" + (parseInt((price/40)/12)) + "<span>per month</span>";
-    basicYear.innerHTML += "$" + (parseInt(price/40)) + "<span>per year</span>";
+    basicMonth.innerHTML += "$" + (thousands_separators(parseInt((price/40)/12))) + "<span>per month</span>";
+    basicYear.innerHTML += "$" + (thousands_separators(parseInt(price/40))) + "<span>per year</span>";
 // premium plan
-    premiumMonth.innerHTML += "$" + (parseInt((price/30)/12)) + "<span>per month</span>";
-    premiumYear.innerHTML += "$" + (parseInt(price/30)) + "<span>per year</span>";
+    premiumMonth.innerHTML += "$" + (thousands_separators(parseInt((price/30)/12))) + "<span>per month</span>";
+    premiumYear.innerHTML += "$" + (thousands_separators(parseInt(price/30))) + "<span>per year</span>";
 // advanced plan
-    advancedMonth.innerHTML += "$" + (parseInt((price/20)/12)) + "<span>per month</span>";
-    advancedYear.innerHTML += "$" + (parseInt(price/20)) + "<span>per year</span>";
+    advancedMonth.innerHTML += "$" + (thousands_separators(parseInt((price/20)/12))) + "<span>per month</span>";
+    advancedYear.innerHTML += "$" + (thousands_separators(parseInt(price/20))) + "<span>per year</span>";
 // pro plan
-    proMonth.innerHTML += "$" + (parseInt((price/15)/12)) + "<span>per month</span>";
-    proYear.innerHTML += "$" + (parseInt(price/15)) + "<span>per year</span>";  
+    proMonth.innerHTML += "$" + (thousands_separators(parseInt((price/15)/12))) + "<span>per month</span>";
+    proYear.innerHTML += "$" + (thousands_separators(parseInt(price/15))) + "<span>per year</span>";  
 
     onePayment.innerText += "$3,400,000";
     headerPayment.innerText += "$3,400,000";
@@ -483,17 +488,17 @@ function firstHouseBuy(){
 function secondHouseBuy(){
     var price = "760000";
 // basic plan
-    basicMonth.innerHTML += "$" + (parseInt((price/40)/12)) + "<span>per month</span>";
-    basicYear.innerHTML += "$" + (parseInt(price/40)) + "<span>per year</span>";
+    basicMonth.innerHTML += "$" + (thousands_separators(parseInt((price/40)/12))) + "<span>per month</span>";
+    basicYear.innerHTML += "$" + (thousands_separators(parseInt(price/40))) + "<span>per year</span>";
 // premium plan
-    premiumMonth.innerHTML += "$" + (parseInt((price/30)/12)) + "<span>per month</span>";
-    premiumYear.innerHTML += "$" + (parseInt(price/30)) + "<span>per year</span>";
+    premiumMonth.innerHTML += "$" + (thousands_separators(parseInt((price/30)/12))) + "<span>per month</span>";
+    premiumYear.innerHTML += "$" + (thousands_separators(parseInt(price/30))) + "<span>per year</span>";
 // advanced plan
-    advancedMonth.innerHTML += "$" + (parseInt((price/20)/12)) + "<span>per month</span>";
-    advancedYear.innerHTML += "$" + (parseInt(price/20)) + "<span>per year</span>";
+    advancedMonth.innerHTML += "$" + (thousands_separators(parseInt((price/20)/12))) + "<span>per month</span>";
+    advancedYear.innerHTML += "$" + (thousands_separators(parseInt(price/20))) + "<span>per year</span>";
 // pro plan
-    proMonth.innerHTML += "$" + (parseInt((price/15)/12)) + "<span>per month</span>";
-    proYear.innerHTML += "$" + (parseInt(price/15)) + "<span>per year</span>";  
+    proMonth.innerHTML += "$" + (thousands_separators(parseInt((price/15)/12))) + "<span>per month</span>";
+    proYear.innerHTML += "$" + (thousands_separators(parseInt(price/15)))+ "<span>per year</span>";  
 
     onePayment.innerText += "$760,000";
     headerPayment.innerText  += "$760,000";
@@ -502,17 +507,17 @@ function secondHouseBuy(){
 function thirdHouseBuy(){
     var price = "1100000";
 // basic plan
-    basicMonth.innerHTML += "$" + (parseInt((price/40)/12)) + "<span>per month</span>";
-    basicYear.innerHTML += "$" + (parseInt(price/40)) + "<span>per year</span>";
+    basicMonth.innerHTML += "$" + (thousands_separators(parseInt((price/40)/12))) + "<span>per month</span>";
+    basicYear.innerHTML += "$" + (thousands_separators(parseInt(price/40))) + "<span>per year</span>";
 // premium plan
-    premiumMonth.innerHTML += "$" + (parseInt((price/30)/12)) + "<span>per month</span>";
-    premiumYear.innerHTML += "$" + (parseInt(price/30)) + "<span>per year</span>";
+    premiumMonth.innerHTML += "$" + (thousands_separators(parseInt((price/30)/12))) + "<span>per month</span>";
+    premiumYear.innerHTML += "$" + (thousands_separators(parseInt(price/30))) + "<span>per year</span>";
 // advanced plan
-    advancedMonth.innerHTML += "$" + (parseInt((price/20)/12)) + "<span>per month</span>";
-    advancedYear.innerHTML += "$" + (parseInt(price/20)) + "<span>per year</span>";
+    advancedMonth.innerHTML += "$" + (thousands_separators(parseInt((price/20)/12))) + "<span>per month</span>";
+    advancedYear.innerHTML += "$" + (thousands_separators(parseInt(price/20))) + "<span>per year</span>";
 // pro plan
-    proMonth.innerHTML += "$" + (parseInt((price/15)/12)) + "<span>per month</span>";
-    proYear.innerHTML += "$" + (parseInt(price/15)) + "<span>per year</span>"; 
+    proMonth.innerHTML += "$" + (thousands_separators(parseInt((price/15)/12))) + "<span>per month</span>";
+    proYear.innerHTML += "$" + (thousands_separators(parseInt(price/15)))+ "<span>per year</span>"; 
     
     onePayment.innerText += "$1,100,000";
     headerPayment.innerText  += "$1,100,000";
@@ -520,21 +525,22 @@ function thirdHouseBuy(){
 function fourthHouseBuy(){
     var price = "400000";
 // basic plan
-    basicMonth.innerHTML += "$" + (parseInt((price/40)/12)) + "<span>per month</span>";
-    basicYear.innerHTML += "$" + (parseInt(price/40)) + "<span>per year</span>";
+    basicMonth.innerHTML += "$" + (thousands_separators(parseInt((price/40)/12))) + "<span>per month</span>";
+    basicYear.innerHTML += "$" + (thousands_separators(parseInt(price/40))) + "<span>per year</span>";
 // premium plan
-    premiumMonth.innerHTML += "$" + (parseInt((price/30)/12)) + "<span>per month</span>";
-    premiumYear.innerHTML += "$" + (parseInt(price/30)) + "<span>per year</span>";
+    premiumMonth.innerHTML += "$" + (thousands_separators(parseInt((price/30)/12))) + "<span>per month</span>";
+    premiumYear.innerHTML += "$" + (thousands_separators(parseInt(price/30))) + "<span>per year</span>";
 // advanced plan
-    advancedMonth.innerHTML += "$" + (parseInt((price/20)/12)) + "<span>per month</span>";
-    advancedYear.innerHTML += "$" + (parseInt(price/20)) + "<span>per year</span>";
+    advancedMonth.innerHTML += "$" + (thousands_separators(parseInt((price/20)/12))) + "<span>per month</span>";
+    advancedYear.innerHTML += "$" + (thousands_separators(parseInt(price/20))) + "<span>per year</span>";
 // pro plan
-    proMonth.innerHTML += "$" + (parseInt((price/15)/12)) + "<span>per month</span>";
-    proYear.innerHTML += "$" + (parseInt(price/15)) + "<span>per year</span>";  
+    proMonth.innerHTML += "$" + (thousands_separators(parseInt((price/15)/12))) + "<span>per month</span>";
+    proYear.innerHTML += "$" + (thousands_separators(parseInt(price/15))) + "<span>per year</span>";  
 
     onePayment.innerText += "$400,000";
     headerPayment.innerText  += "$400,000";
 }
+
     </script>
 </body>
 </html>
