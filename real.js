@@ -62,7 +62,7 @@ if(document.getElementById('cardholder').value.trim().length == 0 || document.ge
     }
 // if card holder input is a number
 if(!(isNaN(document.getElementById('cardholder').value))){
-    window.alert('The cards holder name is not valid.');
+    window.alert('The card holder name is not valid.');
     return;
 }
 paymentForm.classList.add('hide');

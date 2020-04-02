@@ -10,7 +10,6 @@ body{
     color:#777;
     line-height:1.7;
 }
-
 *{
     outline:none;
     box-sizing: border-box;
@@ -27,7 +26,6 @@ body{
     display:flex;
     justify-content:space-between;
 }
-
 h1,h2,h3,h4,h5{
     margin:0;
     padding:0;
@@ -83,9 +81,7 @@ cursor: pointer;
     color:#1ab2ff;
     background:  white;
 }
-
-.selectButton
-{
+.selectButton{
 text-align:center;
 display: block;
 margin:auto; 
@@ -840,31 +836,23 @@ footer small a:hover {
         padding: 4rem 0;
     }
 }
-
 @media (max-width: 400px) {
   #hero .hero-text {
      max-width: 275px;
      width: 100%;
   }
-  
   #properties button.rounded {
      max-width: 250px;
      width: 100%;
   }
-  
   nav ul {
     width: 200px;
   }
 }
-/* end: media queries */
-
-
-
 #media ul {
     list-style: none;
     text-align: center;
 }
-
 #media ul li {
     display: inline-block;
    
@@ -880,9 +868,6 @@ padding:20px;
     color:white;
     transition: all 0.05s;
 }
-
-
-
 @media(max-width: 768px) {
     .collab, #personal, #media, #address {
           text-align: center;
@@ -893,24 +878,13 @@ padding:20px;
           padding: 0;
     }
 }
-
-/*--------------- work page --------------- */
-
-
-
-
-
-
 .hide{
     display: none;
 }
-
-
 /* payment */
-
 .payment{
     background-color: #f8f8f8;
-    max-width:360px;
+    max-width:600px;
     margin: 80px auto;
     height:auto;
     padding:35px;
@@ -1009,12 +983,6 @@ padding:20px;
      transition: all 0.001s;
 transform: scale(1.1);
 }
-
-
-
-
-
-
 #properties-sliderr a.slick-prev{
     right:80px;
 }
@@ -1058,11 +1026,6 @@ transform: scale(1.1);
     font-style: normal;
     margin-top: 0.5rem;
 }
-
-
-
-
-
 .price-table{
     padding:60px 0;   text-align: center;
 }
