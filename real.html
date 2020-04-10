@@ -310,16 +310,17 @@
             <div class="flex">
                     <div id="form-container">
                             <h3>Contact Form</h3>
-                            <form>
+                            <form  action="https://formspree.io/talalzeini@gmail.com" method="POST">
                                 <label for="name">Name</label>
-                                <input type="text" id="name" />
+                                <input type="text" id="name" class="name" name="name" />
                                 <label for="email">Email</label>
-                                <input type="text" id="email" />
+                                <input type="text" class="email" id="email" name="email" />
                                 <label for="subject">Subject</label>
-                                <input type="text" id="subject" />
+                                <input type="text" class="subject" id="subject" name="subject"/>
                                 <label for="message">Message</label>
-                                <textarea id="message" placeholder="Write your message here..."></textarea>
-                                <button class="rounded">Send Message</button>
+                                <textarea name="message" id="message" class="message" placeholder="Write your message here..."></textarea>
+                                <div class="status"></div>
+                                <button class="submit rounded">Send Message</button>
                             </form>
                     </div>
 
