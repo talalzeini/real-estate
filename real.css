@@ -160,10 +160,6 @@ header ul{
 header ul li{
     display:inline-block;
     margin: 0 7px; 
-
-}
-#close-flyout{
-    display: none;
 }
 header ul li a{
     border: 2px solid #1ab2ff;
@@ -852,11 +848,14 @@ footer small a:hover {
 #media ul {
     list-style: none;
     text-align: center;
+    display:flex;
+    align-items: center;
+    justify-content: center;
 }
 #media ul li {
-    display: inline-block;
-   
-padding:20px;
+    padding:20px;
+    position: relative;
+    right:20px;
 }
 #media ul li a{
     display: inline-block;
@@ -927,7 +926,14 @@ padding:20px;
 .icon-relative{
     position:relative;
 }
-.icon-relative .far, .icon-relative .fas{
+.icon-relative .far {
+    position: absolute;
+    left:15px;
+    bottom:15px;
+    font-size:20px;
+    color:#555555;
+}
+.icon-relative .fas{
     position:absolute;
     left:15px;
     bottom:15px;
@@ -970,13 +976,27 @@ padding:20px;
     background:white;
     color:#1ab2ff;
 }
-@media only screen and (max-width:420px){
+@media only screen and (min-width:320px) and (max-width:420px){
     .card-grp{
         flex-direction: column;
     }
     .card-item{
         width:100%;
         margin-bottom: 20px;
+    }
+    .icon-relative .far {
+        position: absolute;
+        left:15px;
+        top:47px;
+        font-size:20px;
+        color:#555555;
+    }
+    .icon-relative .fas{
+        position:absolute;
+        left:15px;
+        bottom:13px;
+        font-size:20px;
+        color:#555555;
     }
 }  
  .fa-times-circle:hover{
